@@ -1,20 +1,21 @@
 # Bookstore API Proposal
 
 ## Overview
-A simple Node.js and Express API for managing a bookstore inventory.
-The app uses MongoDB with Mongoose to store books and provides basic CRUD operations.
+A simple Node.js and Express API for managing bookstore inventory.
+This app uses MongoDB with Mongoose to store book records and supports full CRUD operations.
 
 ## Purpose
-- Store book data in MongoDB
+- Manage book data in MongoDB
 - Provide REST endpoints for create, read, update, delete
-- Support search by author/genre and pagination
-- Include error handling and request logging
+- Support search by author and genre
+- Add pagination and request logging
+- Include basic error handling
 
-## Key Features
-- `GET /api/books` — list books with search and pagination
-- `GET /api/books/:id` — retrieve a specific book
-- `POST /api/books` — add a new book
-- `PUT /api/books/:id` — update a book
+## API Endpoints
+- `GET /api/books` — list books with optional search and pagination
+- `GET /api/books/:id` — get a single book by ID
+- `POST /api/books` — create a new book
+- `PUT /api/books/:id` — update an existing book
 - `DELETE /api/books/:id` — delete a book
 
 ## Setup
@@ -22,7 +23,7 @@ The app uses MongoDB with Mongoose to store books and provides basic CRUD operat
    ```bash
    npm install
    ```
-2. Add MongoDB URI to `.env`:
+2. Create a `.env` file with a MongoDB URI:
    ```text
    MONGO_URI=mongodb+srv://<user>:<pass>@cluster0.xxx.mongodb.net/bookstore
    PORT=5000
@@ -33,5 +34,8 @@ The app uses MongoDB with Mongoose to store books and provides basic CRUD operat
    ```
 
 ## Notes
-- The project is intended as a proposal/readme reference file.
-- Keep the `.env` file private and do not commit it to source control.
+- Keep `.env` private and do not commit it.
+- This README is intended as a short proposal/reference file.
+
+
+
